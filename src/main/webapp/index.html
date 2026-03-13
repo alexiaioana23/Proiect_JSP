@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Administrare Formații</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+    color: #2f3640;
+}
+
+/* HEADER */
+header {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* GRID PRINCIPAL */
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 50px;
+}
+
+/* CARDURI */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #0984e3;
+    font-weight: 600;
+}
+
+/* BUTOANE */
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: linear-gradient(135deg, #0984e3, #00cec9);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #636e72;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+🎵 Dashboard Administrare Formații Muzicale
+</header>
+
+<div class="main">
+
+    <div class="card">
+        <h2>📊 Vizualizare</h2>
+        <button onclick="location.href='vizualizareFormatii.jsp'">Formații</button>
+        <button onclick="location.href='vizualizareMembri.jsp'">Membri</button>
+        <button onclick="location.href='vizualizareContracte.jsp'">Contracte</button>
+    </div>
+
+    <div class="card">
+        <h2>➕ Adăugare</h2>
+        <button onclick="location.href='adaugaFormatie.jsp'">Adaugă formație</button>
+        <button onclick="location.href='adaugaMembru.jsp'">Adaugă membru</button>
+        <button onclick="location.href='adaugaContract.jsp'">Adaugă contract</button>
+    </div>
+
+    <div class="card">
+        <h2>✏ Modificare</h2>
+        <button onclick="location.href='modificaFormatie.jsp'">Modifică formație</button>
+        <button onclick="location.href='modificaMembru.jsp'">Modifică membru</button>
+        <button onclick="location.href='modificaContract.jsp'">Modifică contract</button>
+    </div>
+
+    <div class="card">
+        <h2>🗑 Ștergere</h2>
+        <button onclick="location.href='stergeFormatie.jsp'">Șterge formație</button>
+        <button onclick="location.href='stergeMembru.jsp'">Șterge membru</button>
+        <button onclick="location.href='stergeContract.jsp'">Șterge contract</button>
+    </div>
+
+</div>
+
+<footer>
+Proiect PIBD • Java JSP • MySQL
+</footer>
+
+</body>
+</html>
